@@ -9,4 +9,4 @@ To make progress every day.
 |---|:---:|:---:|:---:|
 | 001 | [Two Sum](https://leetcode.com/problems/two-sum/) | [My Code](https://github.com/shalldie/LeetCode/blob/master/mycode/001%20Two%20Sum/twosum.js) | Easy |
 | 002 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | [My Code](mycode/01%20Two%20Sum/twosum.js) | Medium |
-| ??? | [A long content to make table beauty](javascript:void(0) | [My Code](javascript:void(0) | Easy |
+| ??? | [A long content to make table beauty](javascript:void(0)) | [My Code](javascript:void(0)) | Easy |
