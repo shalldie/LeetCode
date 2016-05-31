@@ -15,7 +15,7 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = function (nums, target) {
+var twoSum = function (nums, target) {                            // 我觉得，我的这个算法，应该是最快的，，，但是不知道为什么...
     var item1, item2;
     for (var i = 0, len = nums.length; i < len; i++) {
         item1 = nums[i];
@@ -26,4 +26,15 @@ var twoSum = function (nums, target) {
         }
     }
     return [];
+};
+
+
+var twoSum = function (nums, target) {
+    for (var i = 0; i < nums.length; i++) {
+        for (var j = i + 1; j < nums.length; j++) {
+            if (nums[j] == target - nums[i]) {
+                return [i, j];
+            }
+        }
+    }
 };

@@ -14,19 +14,29 @@
  * @param {string} s
  * @return {number}
  */
+
 var lengthOfLongestSubstring = function (s) {
     var result = [];
+
     for (var i = 0, len1 = s.length; i < len1; i++) {
         for (var m = 1, len2 = len1 - i; m <= len2; m++) {
             var str = s.substr(i, m);
-            var ifRepeat = str.split('').some(function (item, index) {
-                return str.indexOf(item) != index;
-            });
-
-            !ifRepeat && (result.push(str.length));
+            var repeat = ifRepeat(str);
+            if (repeat) {
+                result.push(str.length - 1);
+                break;
+            }
         }
     }
 
-    result.sort();
-    return result[result.length - 1];
+    result.sort(function (item1, item2) {
+        return item2 - item1;
+    });
+    return result[0];
+
+    function ifRepeat(str) {
+        return str.split('').some(function (item, index) {
+            return str.indexOf(item) != index;
+        });
+    }
 };
